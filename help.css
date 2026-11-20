@@ -1,0 +1,485 @@
+
+/* ==============================
+   HUMANITY HUB - MAIN STYLESHEET
+================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f9fc;
+    color: #292d3e;
+    line-height: 1.7;
+}
+
+/* HEADER */
+
+.header {
+    width: 100%;
+    min-height: 75px;
+    padding: 15px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.07);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: #e63946;
+}
+
+.header nav {
+    display: flex;
+    gap: 30px;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.header nav a:hover {
+    color: #e63946;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    background:
+        linear-gradient(90deg, rgba(30,20,35,0.85), rgba(30,20,35,0.35)),
+        url('https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1800&q=85');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 720px;
+}
+
+.tagline {
+    display: inline-block;
+    color: #ffd166;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.2;
+    margin-bottom: 22px;
+    font-weight: 800;
+}
+
+.hero p {
+    font-size: 17px;
+    max-width: 600px;
+    margin-bottom: 30px;
+    color: #f2f2f2;
+}
+
+.btn {
+    display: inline-block;
+    background: #e63946;
+    color: white;
+    padding: 13px 28px;
+    border: none;
+    border-radius: 7px;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #c92335;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(230,57,70,0.25);
+}
+
+/* ABOUT SECTION */
+
+.about {
+    padding: 75px 10%;
+    text-align: center;
+    background: white;
+}
+
+.about h2,
+.categories h2,
+.help-section h2,
+.impact h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #292d3e;
+}
+
+.about p {
+    max-width: 850px;
+    margin: auto;
+    color: #666;
+    font-size: 16px;
+}
+
+/* CATEGORY SECTION */
+
+.categories {
+    padding: 75px 8%;
+    text-align: center;
+    background: #f8f9fc;
+}
+
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.category {
+    background: white;
+    padding: 35px 20px;
+    border-radius: 13px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    border-bottom: 4px solid transparent;
+}
+
+.category:hover {
+    transform: translateY(-8px);
+    border-bottom-color: #e63946;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.09);
+}
+
+.category span {
+    font-size: 42px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.category h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.category p {
+    color: #777;
+    font-size: 14px;
+}
+
+/* COMMUNITY SECTION */
+
+.help-section {
+    padding: 75px 8%;
+    background: white;
+    text-align: center;
+}
+
+.section-description {
+    color: #777;
+    margin-bottom: 35px;
+}
+
+/* FORM */
+
+.form-container {
+    max-width: 650px;
+    margin: 0 auto 45px;
+    background: #f8f9fc;
+    padding: 35px;
+    border-radius: 14px;
+    text-align: left;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.form-container h3 {
+    text-align: center;
+    font-size: 23px;
+    margin-bottom: 25px;
+}
+
+#helpForm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#helpForm input,
+#helpForm select,
+#helpForm textarea,
+.filter-container input,
+.filter-container select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    background: white;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#helpForm input:focus,
+#helpForm select:focus,
+#helpForm textarea:focus,
+.filter-container input:focus,
+.filter-container select:focus {
+    border-color: #e63946;
+    box-shadow: 0 0 0 3px rgba(230,57,70,0.1);
+}
+
+#helpForm textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+#helpForm button {
+    width: 100%;
+}
+
+.privacy-note {
+    color: #888;
+    font-size: 12px;
+    margin-top: 18px;
+    text-align: center;
+}
+
+/* SEARCH AND FILTER */
+
+.filter-container {
+    max-width: 850px;
+    margin: 0 auto 35px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+}
+
+/* COMMUNITY POSTS */
+
+.help-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    text-align: left;
+}
+
+.help-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    overflow-wrap: anywhere;
+}
+
+.help-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.09);
+}
+
+.help-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #292d3e;
+}
+
+.help-card p {
+    color: #666;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.help-card p strong {
+    color: #333;
+}
+
+.post-type {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: #e4f8eb;
+    color: #21864a;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.post-type.request {
+    background: #fff0ed;
+    color: #d94335;
+}
+
+/* DELETE BUTTON */
+
+.delete-btn {
+    margin-top: 18px;
+    background: #fff0f0;
+    color: #d62839;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    background: #d62839;
+    color: white;
+}
+
+/* EMPTY MESSAGE */
+
+.empty-message {
+    color: #888;
+    padding: 25px;
+    text-align: center;
+}
+
+/* IMPACT SECTION */
+
+.impact {
+    text-align: center;
+    padding: 80px 10%;
+    background: #fff0f1;
+}
+
+.impact h2 {
+    color: #d62839;
+}
+
+.impact p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: #666;
+}
+
+/* FOOTER */
+
+footer {
+    background: #242536;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #ccc;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+    .category-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .help-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header {
+        padding: 15px 5%;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        gap: 12px;
+        position: relative;
+    }
+
+    .header nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 480px;
+        padding: 65px 7%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .about,
+    .categories,
+    .help-section {
+        padding: 55px 6%;
+    }
+
+    .about h2,
+    .categories h2,
+    .help-section h2,
+    .impact h2 {
+        font-size: 26px;
+    }
+
+    .category-container {
+        grid-template-columns: 1fr;
+    }
+
+    .help-list {
+        grid-template-columns: 1fr;
+    }
+
+    .form-container {
+        padding: 22px;
+    }
+
+    .filter-container {
+        grid-template-columns: 1fr;
+    }
+
+    .impact {
+        padding: 60px 7%;
+    }
+}
